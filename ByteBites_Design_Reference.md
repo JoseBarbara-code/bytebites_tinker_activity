@@ -9,6 +9,13 @@ Do not add authentication logic, a database layer, or any features not described
 in the spec.
 
 ## Behavioral Instructions
-<!-- Write a short set of instructions guiding how your AI assistant should behave 
-when helping with this project — for example, which classes to stay within, 
-what complexity to avoid, or any preferences for how suggestions are structured. -->
+- Use exactly four classes: Customer, FoodItem, Menu, and Order.
+- Focus on backend logic only. Do not add a database, user interface, payment system, or authentication system.
+- Include all attributes requested in the specification.
+- Keep class names, attributes, and methods beginner-friendly.
+- Show relationships between classes and explain their multiplicities.
+- Ask about unclear requirements instead of inventing rules.
+- Do not assume that purchase history proves someone is a real user.
+- Explain how changes to menu prices could affect past orders.
+- Provide a Mermaid UML class diagram and a short explanation.
+- Do not generate implementation code yet.
