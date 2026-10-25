@@ -9,7 +9,7 @@ class Customer:
         self.purchase_history = []  # list of Order objects
 
     def add_purchase(self, order):
-        pass
+        self.purchase_history.append(order)
 
 
 class FoodItem:
@@ -25,10 +25,18 @@ class Menu:
         self.items = []  # list of FoodItem objects
 
     def add_item(self, item):
-        pass
+        self.items.append(item)
 
     def filter_by_category(self, category):
-        pass
+        matching_items = []
+        for item in self.items:
+            if item.category == category:
+                matching_items.append(item)
+        return matching_items
+
+    def sort_by_popularity(self):
+        # sorted() returns a new list, so self.items keeps its order
+        return sorted(self.items, key=lambda item: item.popularity_rating, reverse=True)
 
 
 class Order:
@@ -37,7 +45,10 @@ class Order:
         self.items = []  # list of FoodItem objects
 
     def add_item(self, item):
-        pass
+        self.items.append(item)
 
     def compute_total(self):
-        pass
+        total = 0
+        for item in self.items:
+            total = total + item.price
+        return total

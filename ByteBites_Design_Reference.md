@@ -18,4 +18,4 @@ in the spec.
 - Do not assume that purchase history proves someone is a real user.
 - Explain how changes to menu prices could affect past orders.
 - Provide a Mermaid UML class diagram and a short explanation.
-- Do not generate implementation code yet.
+- Generate implementation code only for the current activity step and agreed design.
